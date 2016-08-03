@@ -1,0 +1,260 @@
+#overlay{
+	position:fixed;
+	width:100%;
+	height:100%;
+	top:0;left:0;right:0;bottom:0;
+	display:none;
+	margin:0;
+	padding:0;
+	background-color:#000000;
+	opacity:.5;
+	filter: alpha(opacity=5);
+	-moz-opacity:.5;
+	z-index: 1000;
+}
+.dialog{
+	width: 500px;
+	min-height: 300px;
+	display: none;
+	position:fixed;
+	top:50%;
+	left:50%;
+	margin-top:-150px;
+	margin-left:-250px;
+	background-color:#ffffff;
+	padding:0;
+	z-index: 1001;
+	border: 1px solid #999;
+	  border: 1px solid rgba(0, 0, 0, 0.3);
+	  *border: 1px solid #999;
+	  -webkit-border-radius: 6px;
+	     -moz-border-radius: 6px;
+	          border-radius: 6px;
+	  outline: none;
+	  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+	     -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+	          box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+	  -webkit-background-clip: padding-box;
+	     -moz-background-clip: padding-box;
+	          background-clip: padding-box;
+}
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+     -moz-transition: opacity 0.15s linear;
+       -o-transition: opacity 0.15s linear;
+          transition: opacity 0.15s linear;
+}
+.dialog .modal-header {
+  padding: 0 15px;
+  border-bottom: 1px solid #eee;
+}
+.dialog .modal-body {
+  position: relative;
+  height:auto;
+  padding: 15px;
+  overflow-y: auto;
+}
+.dialog .modal-footer {
+	position:relative;
+	display:block;
+	padding: 14px 15px 15px;
+	text-align: right;
+	background-color: #f5f5f5;
+	border: 1px solid #ddd;
+	-webkit-border-radius: 0 0 6px 6px;
+	   -moz-border-radius: 0 0 6px 6px;
+	        border-radius: 0 0 6px 6px;
+	*zoom: 1;
+	-webkit-box-shadow: inset 0 1px 0 #ffffff;
+	   -moz-box-shadow: inset 0 1px 0 #ffffff;
+	        box-shadow: inset 0 1px 0 #ffffff;
+}
+
+.modal-footer:before,
+.modal-footer:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+
+.modal-footer:after {
+	clear: both;
+}
+
+.modal-footer .btn + .btn {
+	margin-bottom: 0;
+	margin-left: 5px;
+}
+
+.modal-footer .btn-group ._btn + ._btn {
+	margin-left: -1px;
+}
+
+.modal-footer .btn-block + .btn-block {
+	margin-left: 0;
+}
+.close {
+	float: right;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 20px;
+	color: #000000;
+	text-shadow: 0 1px 0 #ffffff;
+	opacity: 0.2;
+	filter: alpha(opacity=20);
+}
+
+.close:hover {
+	color: #000000;
+	text-decoration: none;
+	cursor: pointer;
+	opacity: 0.4;
+	filter: alpha(opacity=40);
+}
+
+button.close {
+	padding: 0;
+	cursor: pointer;
+	background: transparent;
+	border: 0;
+	-webkit-appearance: none;
+}
+
+.add-on{
+  color: #3a87ad;
+  background-color: #d9edf7;
+  border-color: #3a87ad;
+}
+.add-on,.middle-p{
+  display: block;
+  width: auto;
+  min-width: 16px;
+  height: 34px;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  text-shadow: 0 1px 0 #ffffff;
+  background-color: #eeeeee;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+}
+.add-on{
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+.add-on:first-child {
+  -webkit-border-radius: 4px 0 0 4px;
+     -moz-border-radius: 4px 0 0 4px;
+          border-radius: 4px 0 0 4px;
+}
+.add-on:last-child {
+  -webkit-border-radius: 0 4px 4px 0;
+     -moz-border-radius: 0 4px 4px 0;
+          border-radius: 0 4px 4px 0;
+}
+select {
+	border: 1px solid #ccc;
+    margin-left: -1px;
+    margin-top: 5px;
+    padding-top:10px;
+    -webkit-border-radius:4px;
+    	-moz-border-radius:4px;
+   			 border-radius:4px;
+   /* -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    	-moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    		box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;*/
+    		border-left:none;
+    
+    color:#888;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+    width:235px;
+     -webkit-border-radius: 0 4px 0 0;
+     	-moz-border-radius: 0 4px 0 0;
+      		 border-radius: 0 4px 0 0;
+      vertical-align: middle;
+}
+
+/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select {padding-right:18px}
+}
+
+label.tag-select {position:relative}
+label.tag-select:after {
+    content:'<>';
+    font:16px "Consolas", monospace;
+    color:#aaa;
+    -webkit-transform:rotate(90deg);
+   	 -moz-transform:rotate(90deg);
+    	-ms-transform:rotate(90deg);
+    transform:rotate(90deg);
+    right:6px;
+    top: -4px; 
+    background: #fff;
+    border-bottom:1px solid #ddd;
+    position:absolute;
+    pointer-events:none;
+    padding: 9px;
+     -webkit-border-radius: 0 4px 0 0;
+     	-moz-border-radius: 0 4px 0 0;
+      		 border-radius: 0 4px 0 0;
+}
+label.tag-select:before {
+    content:'';
+    right:6px; top:0;
+    width:20px; height:30px;
+    background:#f8f8f8;
+    position:absolute;
+    pointer-events:none;
+    display:block;
+}
+
+select{
+  cursor: pointer;
+}
+
+
+select{
+  height: 38px;
+  /* In IE7, the height of the select element cannot be changed by height, only font-size */
+
+  *margin-top: 4px;
+  /* For IE7, add top margin to align select with labels */
+
+  line-height: 30px;
+}
+
+select[multiple],
+select[size] {
+  height: auto;
+}
+select:focus{
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+select[disabled]
+select[readonly] {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+}
+
+select:focus:invalid {
+  color: #b94a48;
+  border-color: #ee5f5b;
+}
+
+select:focus:invalid:focus {
+  border-color: #e9322d;
+  -webkit-box-shadow: 0 0 6px #f8b9b7;
+     -moz-box-shadow: 0 0 6px #f8b9b7;
+          box-shadow: 0 0 6px #f8b9b7;
+}
